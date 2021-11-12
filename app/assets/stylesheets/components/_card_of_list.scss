@@ -1,0 +1,16 @@
+.container-cards-list {
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-text {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}

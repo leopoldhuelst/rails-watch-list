@@ -1,0 +1,26 @@
+<h1>Add a movie to a List</h1>
+<h2>Movies:</h2>
+<%= simple_form_for [ @list, @bookmark ] do |f| %>
+  <%= f.input :movie_id %>
+  <%= f.input :comment %>
+  <%= f.submit "Add movie", class: "btn btn-primary" %>
+<% end %>
+<br>
+<br>
+<ul>
+<% @movies = Movie.all %>
+<% @movies.each do |movie| %>
+<li>
+<%= "#{movie.id} - " %>
+<%= "Title: #{movie.title}" %>
+<br>
+<%= movie.overview %>
+<br>
+<%= "Rating: #{movie.rating}" %>
+<br>
+<img src="#{movie.poster_url}" alt="Movie Poster">
+</li>
+<% end %>
+</ul>
+
+<%= link_to "Back to List", list_path(@list) %>

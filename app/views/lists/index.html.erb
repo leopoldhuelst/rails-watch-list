@@ -1,0 +1,15 @@
+<div class="banner">
+  <h1>Save your movies</h1>
+</div>
+<div>
+  <h2 class="header">All Lists</h2>
+  <%= link_to "Add a new list", lists_new_path %>
+</div>
+<div class="container">
+  <% @lists.each do |list| %>
+  <div class=container-cards-list style="background-image: url(<%= list.photo_url %>)">
+      <%= link_to "#{list.name}", list_path(list.id), class:"card-text" %>
+      <%= link_to "Delete", list_delete_path(list.id), method: :delete, data: { confirm: "Are you sure?" }, class:"card-text" %>
+  </div>
+  <% end %>
+</div>
