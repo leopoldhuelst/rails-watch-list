@@ -1,15 +1,27 @@
 <div class="banner">
   <h1>Save your movies</h1>
 </div>
-<div>
-  <h2 class="header">All Lists</h2>
-  <%= link_to "Add a new list", lists_new_path %>
+<div class="container-header">
+  <h2 class="container-header-text">All Lists</h2>
+  <%= link_to "Add list", lists_new_path, id:"container-header-button"%>
 </div>
 <div class="container">
   <% @lists.each do |list| %>
   <div class=container-cards-list style="background-image: url(<%= list.photo_url %>)">
-      <%= link_to "#{list.name}", list_path(list.id), class:"card-text" %>
-      <%= link_to "Delete", list_delete_path(list.id), method: :delete, data: { confirm: "Are you sure?" }, class:"card-text" %>
+      <div class=container-cards-list-header><%= link_to "X", list_delete_path(list.id), method: :delete, data: { confirm: "Are you sure?" }, class:"card-delete" %></div>
+      <div class=container-cards-list-text><%= link_to "#{list.name}", list_path(list.id), class:"card-text" %></div>
   </div>
   <% end %>
+</div>
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    Le Wagon
+  </div>
 </div>

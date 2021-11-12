@@ -4,13 +4,29 @@
   height: 250px;
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.container-cards-list-text {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 195px;
+}
+
+.container-cards-list-header {
+  text-align: right;
 }
 
 .card-text {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  font-size: 20px;
+}
+
+.card-delete {
+  text-decoration: none;
+  color: rgb(68, 68, 68);
+  font-size: 15px;
+  padding: 5px 10px;
 }
