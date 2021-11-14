@@ -1,8 +1,28 @@
-<h1>Create a new List</h1>
-<%= form_for(@list) do |f|%>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.label :photo_url %>
-  <%= f.text_field :photo_url %>
-  <%= f.submit %>
-<% end %>
+<div class="banner">
+  <h1>Save your movies</h1>
+</div>
+<div class="container-header">
+  <h2 class="container-header-text">Create a new List</h2>
+</div>
+<%= link_to "←Back", lists_path, id:"back-button" %>
+<div class="form">
+  <%= form_for(@list) do |f|%>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :photo_url %>
+    <%= f.text_field :photo_url %>
+    <%= f.submit %>
+  <% end %>
+</div>
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    Le Wagon
+  </div>
+</div>

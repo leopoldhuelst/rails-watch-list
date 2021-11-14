@@ -1,26 +1,39 @@
-<h1>Add a movie to a List</h1>
-<h2>Movies:</h2>
-<%= simple_form_for [ @list, @bookmark ] do |f| %>
-  <%= f.input :movie_id %>
-  <%= f.input :comment %>
-  <%= f.submit "Add movie", class: "btn btn-primary" %>
-<% end %>
-<br>
-<br>
-<ul>
+<div class="banner">
+  <h1>Save your movies</h1>
+</div>
+<div class="container-header">
+  <h2 class="container-header-text">Add a movie</h2>
+</div>
+<%= link_to "←Back", list_path(@list), id:"back-button" %>
+<div class="form">
+  <%= simple_form_for [ @list, @bookmark ] do |f| %>
+    <%= f.input :movie_id %>
+    <%= f.input :comment %>
+    <%= f.submit "Add movie"%>
+  <% end %>
+</div>
 <% @movies = Movie.all %>
 <% @movies.each do |movie| %>
-<li>
-<%= "#{movie.id} - " %>
-<%= "Title: #{movie.title}" %>
-<br>
-<%= movie.overview %>
-<br>
-<%= "Rating: #{movie.rating}" %>
-<br>
-<img src="#{movie.poster_url}" alt="Movie Poster">
-</li>
+<div class="card-product">
+  <img src=<%=movie.poster_url%> />
+  <div class="card-product-infos">
+    <div class="card-product-infos-header">
+      <h2><%= movie.title %></h2>
+    </div>
+    <p><%= movie.overview %></p>
+    <p><%= "Rating: #{movie.rating}" %></p>
+  </div>
+</div>
 <% end %>
-</ul>
-
-<%= link_to "Back to List", list_path(@list) %>
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    Le Wagon
+  </div>
+</div>

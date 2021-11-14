@@ -13,7 +13,7 @@
   <div class="card-product-infos">
     <div class="card-product-infos-header">
       <h2><%= movie.title %></h2>
-      <%= link_to "X", bookmark_delete_path(bookmark), method: :delete, data: { confirm: "Are you sure?" }, id:"card-header-delete" %>
+      <%= link_to "X", bookmark_delete_path(bookmark), method: :delete, data: { confirm: "Are you sure you would like to delete #{movie.title} from #{@list.name}?" }, id:"card-header-delete" %>
     </div>
     <p><%= movie.overview %></p>
     <p><%= "Rating: #{movie.rating}" %></p>
@@ -21,9 +21,6 @@
   </div>
 </div>
 <% end %>
-
-
-
 <div class="footer">
   <div class="footer-links">
     <a href="#"><i class="fab fa-github"></i></a>

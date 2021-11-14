@@ -1,15 +1,17 @@
 #back-button {
   text-decoration: none;
   color: gray;
+  padding-left: 30px;
 }
 
 .card-product {
   overflow: hidden;
   height: 200px;
-  background: #dfdfdf;
+  background: #ffffff;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
-  margin: 20px 0px;
+  margin: 20px 30px;
+  border-radius: 4px;
 }
 
 .card-product-infos {
