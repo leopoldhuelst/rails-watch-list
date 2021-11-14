@@ -1,0 +1,50 @@
+#back-button {
+  text-decoration: none;
+  color: gray;
+}
+
+.card-product {
+  overflow: hidden;
+  height: 200px;
+  background: #dfdfdf;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  margin: 20px 0px;
+}
+
+.card-product-infos {
+  width: -webkit-fill-available;
+}
+
+.card-product img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.card-product-infos-header {
+  display: flex;
+}
+.card-product-infos-header h2 {
+  flex-grow: 1;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+#card-header-delete {
+  text-decoration: none;
+  color: gray;
+}
+
+.card-product p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-product .card-product-infos {
+  padding: 16px;
+}
